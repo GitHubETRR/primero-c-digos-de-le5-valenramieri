@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    int min;
+
+    printf("Ingrese el primer numero: ");
+    if (scanf("%d", &num1) != 1) return 1;
+
+    printf("Ingrese el segundo numero: ");
+    if (scanf("%d", &num2) != 1) return 1;
+
+    printf("Ingrese el tercer numero: ");
+    if (scanf("%d", &num3) != 1) return 1;
+
+    if (num1 == num2 && num2 == num3) {
+        printf("Los tres numeros son iguales.\n");
+        return 0;
+    }
+
+  
+    min = num1;
+    if (num2 < min) min = num2;
+    if (num3 < min) min = num3;
+
+    printf("El menor es: %d\n", min);
+
+    return 0;
+}
