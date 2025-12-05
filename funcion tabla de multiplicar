@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+
+void tablaDeMultiplicar(int numero);
+
+int main() {
+    int n;
+
+    printf("Ingrese un numero: ");
+    scanf("%d", &n);
+
+    tablaDeMultiplicar(n);
+
+    return 0;
+}
+
+
+void tablaDeMultiplicar(int numero) {
+    printf("\nTabla de multiplicar del %d:\n", numero);
+    for (int i = 0; i <= 10; i++) {
+        printf("%d x %d = %d\n", numero, i, numero * i);
+    }
+}
